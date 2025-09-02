@@ -1,0 +1,98 @@
+Algoritmo calculadora_ecuaciones_basicas
+	// 1. Definir variables
+	Definir alternativa Como Entero;
+	Definir numero1, numero2, resultado Como Real;
+	
+	Repetir
+		Escribir "__________CALCULADORA__________";
+		Escribir "1. Suma";
+		Escribir "2. Resta";
+		Escribir "3. Multiplicacion";
+		Escribir "4. Division";
+		Escribir "5. Salir";
+		Escribir "Seleccione una opcion: ";
+		Leer alternativa;
+		
+		// 2. Procesar datos
+		Segun alternativa Hacer
+			1:
+				Escribir "_____SUMA_____";
+				Escribir "Ingrese el primer numero: ";
+				Leer numero1;
+				Escribir "Ingrese el siguiente numero: ";
+				Leer numero2;
+				
+				resultado <- numero1 + numero2;
+				Escribir "Resultado : ", resultado;
+				
+				Si resultado % 2 = 0 Entonces
+					Escribir "El resultado es PAR.";
+				SiNo
+					Escribir "El resultado es IMPAR.";
+				FinSi
+				
+			2:
+				Escribir "_____RESTA_____";
+				Escribir "Ingrese el primer numero: ";
+				Leer numero1;
+				Escribir "Ingrese el siguiente numero: ";
+				Leer numero2;
+				
+				resultado <- numero1 - numero2;
+				Escribir "Resultado: ", resultado;
+				
+				Si resultado % 2 = 0 Entonces
+					Escribir "El resultado es PAR.";
+				SiNo
+					Escribir "El resultado es IMPAR.";
+				FinSi
+				
+			3:
+				Escribir "_____MULTIPLICACION_____";
+				Escribir "Ingrese el primer numero: ";
+				Leer numero1;
+				Escribir "Ingrese el siguiente numero: ";
+				Leer numero2;
+				
+				resultado <- numero1 * numero2;
+				Escribir "Resultado: ", resultado;
+				
+				Si resultado % 2 = 0 Entonces
+					Escribir "El resultado es PAR.";
+				SiNo
+					Escribir "El resultado es IMPAR.";
+				FinSi
+				
+			4:
+				Escribir "_____DIVISION_____";
+				Escribir "Ingrese el primer numero: ";
+				Leer numero1;
+				Escribir "Ingrese el segundo numero: ";
+				Leer numero2;
+				
+				Si numero2 = 0 Entonces
+					Escribir "Error: no se puede dividir entre 0";
+				SiNo
+					resultado <- numero1 / numero2;
+					Escribir "Resultado: ", resultado;
+					
+					Si resultado % 2 = 0 Entonces
+						Escribir "El resultado es PAR.";
+					SiNo 
+						Escribir "El resultado es IMPAR.";
+					FinSi
+				FinSi
+				
+			5:
+				Escribir "Saliendo...";
+				
+			De Otro Modo:
+				Escribir "Error: opción no válida, inténtelo de nuevo.";
+				
+		FinSegun
+		
+		Escribir " "; 
+		
+	Hasta Que alternativa = 5
+FinAlgoritmo
+

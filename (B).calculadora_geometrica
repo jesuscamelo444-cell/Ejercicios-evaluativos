@@ -1,0 +1,77 @@
+Algoritmo calculadora_geometrica
+	// 1 Definir vaaribles
+	Definir opcion1 Como Entero;
+	Definir numero1, numero2, resultado Como Real;
+	Definir base, altura, radio Como Real;
+	// 2 menu
+	Repetir
+		Escribir "====================";
+		Escribir "=====CALCULADORA=====";
+		Escribir "1. Area de un triangulo";
+		Escribir "2. Area de un rectangulo";
+		Escribir "3. Area de circulo";
+		Escribir "4. Bolumen de esfera";
+		Escribir "5. Bolumen de cilindro";
+		Escribir "6. Bolumen cono";
+	    Escribir "____________________"
+		Escribir "Ingresa una opcion: ";
+		Leer opcion1;
+		Segun opcion1 Hacer
+			1:
+				Escribir "Ingrese la base del triangulo: ";
+				Leer base;
+				
+				Escribir "Ingrese la altura del triangulo: ";
+				Leer altura;
+				
+				resultado <- (base * altura )/2;
+				Escribir "El area del triangulo es: ", resultado;
+			2:
+				Escribir "Ingrese la base del rectángulo: ";
+				Leer base;
+				
+				Escribir "Ingrese la altura del rectángulo: ";
+				Leer altura;
+				
+				resultado <- base * altura;
+				Escribir "El área del rectángulo es: ", resultado;
+			3:
+				Escribir "Ingrese el radio del círculo: ";
+				Leer radio;
+				
+				resultado <- 3.1416 * radio * radio;
+				Escribir "El área del círculo es: ", resultado;
+			4:
+				Escribir "Ingresa el radio de la esfera: ";
+				Leer radio;
+				
+				resultado <- (4/3) * 3.1416 * radio * radio * radio;
+				Escribir "El bolumen de la esfera es: " ,resultado "m3";
+			5:
+				Escribir "Ingrese el radio del cilindro: ";
+				Leer radio;
+				
+				Escribir "Ingrese la base del cilindro: ";
+				Leer base;
+				
+				Escribir "Ingrese la altura del cilindo: ";
+				Leer altura;
+				
+				resultado <- 3.1416 * radio *radio * altura;
+				Escribir "El volumen del cilindro es: " resultado;
+			6:
+				Escribir "Ingrese el radio del cono: ";
+				Leer radio
+				
+				Escribir "Ingrese la base del radio: ";
+				Leer base;
+				
+				Escribir "Ingrese la altura del cono: ";
+				Leer altura;
+				
+				resultado <- 1/3 * radio *radio * altura;
+				Escribir "El volumen del cono es: ";
+		FinSegun
+		
+	Hasta Que opcion1 = 0;
+FinAlgoritmo

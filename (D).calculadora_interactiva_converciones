@@ -1,0 +1,107 @@
+Algoritmo calculadora_interactiva_converciones
+	// 1. Definir variables
+	Definir alternativa Como Entero;
+	Definir cantidad, resultado Como Real;
+	Definir continuar, repetir_opcion Como Caracter;
+	
+	continuar <- "S"
+	
+	Repetir
+		// 2.  menú
+		Escribir "_____CALCULADORA_____"
+		Escribir "1. Convertir Kilómetros a Millas";
+		Escribir "2. Convertir Pulgadas a Centímetros";
+		Escribir "3. Convertir Libras a Kilogramos";
+		Escribir "4. Convertir Litros a Galones";
+		Escribir "5. Salir";
+		Escribir "Ingrese una opción : ";
+		Leer alternativa;
+		
+		// 3. Validar 
+		Si alternativa < 1 O alternativa > 5 Entonces
+			Escribir "Error: opción no válida. Intente nuevamente.";
+		SiNo
+			Segun alternativa Hacer
+				1:
+					repetir_opcion <- "S"
+					Mientras repetir_opcion = "S" O repetir_opcion = "s" Hacer
+						Repetir
+							Escribir "Ingrese la cantidad en kilómetros: ";
+							Leer cantidad;
+							Si cantidad < 0 Entonces
+								Escribir "La cantidad no puede ser negativa. Intente de nuevo.";
+							FinSi
+						Hasta Que cantidad >= 0
+						resultado <- cantidad * 0.621371;
+						Escribir cantidad, " Km equivalen a ", resultado, " millas.";
+						
+						Escribir "¿Desea convertir más kilómetros? (S/N): ";
+						Leer repetir_opcion;
+					FinMientras
+					
+				2:
+					repetir_opcion <- "S"
+					Mientras repetir_opcion = "S" O repetir_opcion = "s" Hacer
+						Repetir
+							Escribir "Ingrese la cantidad en pulgadas: ";
+							Leer cantidad;
+							Si cantidad < 0 Entonces
+								Escribir "La cantidad no puede ser negativa. Intente de nuevo.";
+							FinSi
+						Hasta Que cantidad >= 0
+						resultado <- cantidad * 2.54;
+						Escribir cantidad, " pulgadas equivalen a ", resultado, " cm.";
+						
+						Escribir "¿Desea convertir más pulgadas? (S/N): ";
+						Leer repetir_opcion;
+					FinMientras
+					
+				3:
+					repetir_opcion <- "S"
+					Mientras repetir_opcion = "S" O repetir_opcion = "s" Hacer
+						Repetir
+							Escribir "Ingrese la cantidad en libras: ";
+							Leer cantidad;
+							Si cantidad < 0 Entonces
+								Escribir "La cantidad no puede ser negativa. Intente de nuevo.";
+							FinSi
+						Hasta Que cantidad >= 0
+						resultado <- cantidad * 0.453592;
+						Escribir cantidad, " libras equivalen a ", resultado, " kg.";
+						
+						Escribir "¿Desea convertir más libras? (S/N): ";
+						Leer repetir_opcion;
+					FinMientras
+					
+				4:
+					repetir_opcion <- "S"
+					Mientras repetir_opcion = "S" O repetir_opcion = "s" Hacer
+						Repetir
+							Escribir "Ingrese la cantidad en litros: ";
+							Leer cantidad;
+							Si cantidad < 0 Entonces
+								Escribir "La cantidad no puede ser negativa. Intente de nuevo.";
+							FinSi
+						Hasta Que cantidad >= 0
+						resultado <- cantidad * 0.264172;
+						Escribir cantidad, " litros equivalen a ", resultado, " galones.";
+						
+						Escribir "¿Desea convertir más litros? (S/N): ";
+						Leer repetir_opcion;
+					FinMientras
+					
+				5:
+					Escribir "Gracias por usar la calculadora. ¡Hasta pronto!";
+					continuar <- "N"
+			FinSegun
+		FinSi
+		
+		// 4. Preguntar si desea continuar en el menú principal
+		Si opcion <> 5 Entonces
+			Escribir "¿Desea realizar otra conversión? (S/N): ";
+			Leer continuar;
+		FinSi
+		
+	Hasta Que continuar = "N" O continuar = "n"
+	
+FinAlgoritmo
